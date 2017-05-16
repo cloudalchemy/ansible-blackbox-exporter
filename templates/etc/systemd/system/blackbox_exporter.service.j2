@@ -1,0 +1,17 @@
+[Unit]
+Description=Blackbox Exporter
+After=network.target
+
+[Service]
+Type=simple
+PIDFile={{ blackbox_exporter_pid_path }}
+User={{ blackbox_exporter_user }}
+Group={{ blackbox_exporter_group }}
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart={{ blackbox_exporter_bin_dir }}/blackbox_exporter {% for flag, flag_value in blackbox_exporter_config_flags.iteritems() %}-{{ flag }}={{ flag_value }} {% endfor %}
+
+SyslogIdentifier=blackbox_exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

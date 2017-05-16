@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Roman Demachkovych 
+  description: Deploy Blackbox Exporter
+  company: Sointeractive
+  min_ansible_version: 1.9
+  platforms:
+   - name: EL
+     versions:
+       - all
+   - name: Ubuntu
+     versions:
+       - 16.04
+  galaxy_tags:
+   - blackbox_exporter
+   - monitoring
+   - prometheus
+
+#dependencies:
+#  - { role: username.common }
+

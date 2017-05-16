@@ -1,0 +1,100 @@
+---
+- name: install needed packages
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - curl
+    - tar
+    - bzip2
+
+- name: create blackbox_exporter system group
+  group:
+    name: "{{ blackbox_exporter_group }}"
+    system: yes
+    state: present
+
+- name: create blackbox_exporter system user
+  user:
+    name: "{{ blackbox_exporter_user }}"
+    system: yes
+    shell: "/sbin/nologin"
+    group: "{{ blackbox_exporter_group }}"
+    createhome: no
+
+- name: create blackbox_exporter directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ blackbox_exporter_user }}"
+    group: "{{ blackbox_exporter_group }}"
+    mode: 0755
+  with_items:
+    - "{{ blackbox_exporter_root_dir }}"
+    - "{{ blackbox_exporter_dist_dir }}"
+    - "{{ blackbox_exporter_log_dir }}"
+
+- name: download blackbox_exporter binary to local folder
+  become: no
+  get_url:
+    url: "{{ blackbox_exporter_url }}"
+    dest: /tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64.tar.gz
+    validate_certs: no
+#    force: true
+  run_once: true
+  delegate_to: localhost
+
+- name: propagate blackbox_exporter binary
+  copy:
+   src: /tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64.tar.gz
+   dest: "{{ blackbox_exporter_dist_dir }}"
+
+- name: unarchive binary tarball
+  unarchive:
+    copy: no
+    src: "{{ blackbox_exporter_dist_dir }}/{{ blackbox_exporter_release_name }}.tar.gz"
+    dest: "{{ blackbox_exporter_dist_dir }}"
+    creates: "{{ blackbox_exporter_dist_dir }}/{{ blackbox_exporter_release_name }}/blackbox_exporter"
+  register: blackbox_exporter_updated
+  notify:
+    - restart blackbox_exporter
+
+- name: update group and owner for files
+  file:
+    path: "{{ blackbox_exporter_release_name }}"
+    state: directory
+    recurse: yes
+    owner: "{{ blackbox_exporter_user}}"
+    group: "{{ blackbox_exporter_group }}"
+  when: blackbox_exporter_updated | changed
+  
+- name: create symlink to the current release
+  file:
+    src: "{{ blackbox_exporter_dist_dir }}/{{ blackbox_exporter_release_name }}"
+    path: "{{ blackbox_exporter_root_dir }}/current"
+    state: link
+
+- name: create systemd service unit
+  template:
+    src: etc/systemd/system/blackbox_exporter.service.j2
+    dest: /etc/systemd/system/blackbox_exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart blackbox_exporter
+
+- name: copy blackbox config files
+  copy:
+    src: "blackbox_exporter.yml"
+    dest: "{{ blackbox_exporter_config_file }}"
+    owner: "{{ blackbox_exporter_user }}"
+    group: "{{ blackbox_exporter_group }}"
+    mode: 0644
+  notify:
+    - reload blackbox_exporter    
+
+- name: ensure blackbox_exporter service is enabled
+  service:
+    name: blackbox_exporter
+    enabled: yes

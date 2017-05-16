@@ -1,0 +1,27 @@
+---
+blackbox_exporter_version: "0.5.0"
+
+blackbox_exporter_url: "https://github.com/prometheus/blackbox_exporter/releases/download/v{{ blackbox_exporter_version }}/blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64.tar.gz"
+blackbox_exporter_release_name: "blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64"
+blackbox_exporter_install_dir: "/opt/blackbox_exporter"
+
+blackbox_exporter_root_dir: "/opt/blackbox_exporter"
+blackbox_exporter_dist_dir: "{{ blackbox_exporter_root_dir }}/dist"
+blackbox_exporter_bin_dir: "{{ blackbox_exporter_root_dir }}/current"
+
+blackbox_exporter_config_file: "/etc/blackbox_exporter.yml"
+blackbox_exporter_pid_path: "/var/run/blackbox_exporter.pid"
+blackbox_exporter_log_dir: "/var/log/blackbox_exporter"
+blackbox_exporter_log_file: "{{ blackbox_exporter_log_dir }}/blackbox_exporter.log"
+
+blackbox_exporter_log_level: info
+blackbox_exporter_log_format: ''
+
+blackbox_exporter_user: prometheus
+blackbox_exporter_group: prometheus
+blackbox_exporter_service_name: blackbox_exporter
+blackbox_exporter_web_listen_address: "0.0.0.0:9115"
+
+blackbox_exporter_config_flags:
+  'config.file': '{{ blackbox_exporter_config_file }} '
+  'web.listen-address': '{{ blackbox_exporter_web_listen_address }}'
