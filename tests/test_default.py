@@ -40,7 +40,7 @@ def test_service(Service):
 
 def test_socket(Socket):
     present = [
-        "tcp://0.0.0.0:9115"
+        "tcp://127.0.0.1:9115"
     ]
     for socket in present:
         s = Socket(socket)
