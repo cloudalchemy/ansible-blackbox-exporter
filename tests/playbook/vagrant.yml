@@ -1,9 +1,0 @@
----
-- hosts: all
-  gather_facts: yes
-
-- hosts: all
-  become: yes
-  become_user: root
-  roles:
-  - role: ../../blackbox-exporter

@@ -1,13 +1,13 @@
 ---
-- name: install needed packages
-  package:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - curl
-    - tar
-    - bzip2
-
+#- name: install needed packages
+#  package:
+#    name: "{{ item }}"
+#    state: latest
+#  with_items:
+#    - curl
+#    - tar
+#    - bzip2
+#
 - name: create blackbox_exporter system group
   group:
     name: "{{ blackbox_exporter_group }}"
@@ -67,7 +67,7 @@
     owner: "{{ blackbox_exporter_user}}"
     group: "{{ blackbox_exporter_group }}"
   when: blackbox_exporter_updated | changed
-  
+
 - name: create symlink to the current release
   file:
     src: "{{ blackbox_exporter_dist_dir }}/{{ blackbox_exporter_release_name }}"
@@ -92,7 +92,7 @@
     group: "{{ blackbox_exporter_group }}"
     mode: 0644
   notify:
-    - reload blackbox_exporter    
+    - reload blackbox_exporter
 
 - name: ensure blackbox_exporter service is enabled
   service:
