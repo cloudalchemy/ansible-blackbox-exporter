@@ -1,5 +1,5 @@
 ---
-blackbox_exporter_version: "0.5.0"
+blackbox_exporter_version: "0.7.0"
 
 blackbox_exporter_url: "https://github.com/prometheus/blackbox_exporter/releases/download/v{{ blackbox_exporter_version }}/blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64.tar.gz"
 blackbox_exporter_release_name: "blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64"

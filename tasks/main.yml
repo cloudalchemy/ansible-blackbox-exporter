@@ -92,6 +92,7 @@
     group: "{{ blackbox_exporter_group }}"
     mode: 0644
   notify:
+    - reload systemd
     - reload blackbox_exporter
 
 - name: ensure blackbox_exporter service is enabled
