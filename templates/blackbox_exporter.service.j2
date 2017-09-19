@@ -1,0 +1,19 @@
+[Unit]
+Description=Blackbox Exporter
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/blackbox_exporter.pid
+User=blackbox-exp
+Group=blackbox-exp
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart={{ blackbox_exporter_root_dir }}/blackbox_exporter \
+  --config.file=/etc/blackbox_exporter.yml \
+  --web.listen-address={{ blackbox_exporter_web_listen_address }}
+
+SyslogIdentifier=blackbox_exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

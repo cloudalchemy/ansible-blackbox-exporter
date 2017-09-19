@@ -1,27 +1,61 @@
 ---
-blackbox_exporter_version: "0.7.0"
-
-blackbox_exporter_url: "https://github.com/prometheus/blackbox_exporter/releases/download/v{{ blackbox_exporter_version }}/blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64.tar.gz"
-blackbox_exporter_release_name: "blackbox_exporter-{{ blackbox_exporter_version }}.linux-amd64"
-blackbox_exporter_install_dir: "/opt/blackbox_exporter"
+blackbox_exporter_version: "0.8.1"
 
 blackbox_exporter_root_dir: "/opt/blackbox_exporter"
-blackbox_exporter_dist_dir: "{{ blackbox_exporter_root_dir }}/dist"
-blackbox_exporter_bin_dir: "{{ blackbox_exporter_root_dir }}/current"
-
-blackbox_exporter_config_file: "/etc/blackbox_exporter.yml"
-blackbox_exporter_pid_path: "/var/run/blackbox_exporter.pid"
 blackbox_exporter_log_dir: "/var/log/blackbox_exporter"
-blackbox_exporter_log_file: "{{ blackbox_exporter_log_dir }}/blackbox_exporter.log"
 
-blackbox_exporter_log_level: info
-blackbox_exporter_log_format: ''
-
-blackbox_exporter_user: prometheus
-blackbox_exporter_group: prometheus
-blackbox_exporter_service_name: blackbox_exporter
 blackbox_exporter_web_listen_address: "0.0.0.0:9115"
 
-blackbox_exporter_config_flags:
-  'config.file': '{{ blackbox_exporter_config_file }} '
-  'web.listen-address': '{{ blackbox_exporter_web_listen_address }}'
+blackbox_exporter_configuration_modules: []
+blackbox_exporter_configuration_modules:
+  http_2xx:
+    prober: http
+    timeout: 5s
+    http:
+  http_post_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      method: POST
+      basic_auth:
+        username: "username"
+        password: "mysecret"
+  tcp_connect:
+    prober: tcp
+    timeout: 5s
+  pop3s_banner:
+    prober: tcp
+    tcp:
+      query_response:
+      - expect: "^+OK"
+      tls: true
+      tls_config:
+        insecure_skip_verify: false
+  ssh_banner:
+    prober: tcp
+    timeout: 5s
+    tcp:
+      query_response:
+      - expect: "^SSH-2.0-"
+  irc_banner:
+    prober: tcp
+    timeout: 5s
+    tcp:
+      query_response:
+      - send: "NICK prober"
+      - send: "USER prober prober prober :prober"
+      - expect: "PING :([^ ]+)"
+        send: "PONG ${1}"
+      - expect: "^:[^ ]+ 001"
+  icmp_test:
+    prober: icmp
+    timeout: 5s
+    icmp:
+      preferred_ip_protocol: ip4
+  dns_test:
+    prober: dns
+    timeout: 5s
+    dns:
+      preferred_ip_protocol: ip6
+      validate_answer_rrs:
+        fail_if_matches_regexp: [test]

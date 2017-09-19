@@ -6,8 +6,6 @@ testinfra_hosts = AnsibleRunner('.molecule/ansible_inventory').get_hosts('all')
 def test_directories(File):
     present = [
         "/opt/blackbox_exporter",
-        "/opt/blackbox_exporter/dist",
-        "/opt/blackbox_exporter/current",
         "/var/log/blackbox_exporter"
     ]
     if present:
@@ -19,7 +17,8 @@ def test_directories(File):
 
 def test_files(File):
     present = [
-        "/etc/blackbox_exporter.yml"
+        "/etc/blackbox_exporter.yml",
+        "/opt/blackbox_exporter/blackbox_exporter"
     ]
     if present:
         for file in present:
