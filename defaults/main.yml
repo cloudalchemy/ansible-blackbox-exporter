@@ -6,7 +6,7 @@ blackbox_exporter_log_dir: "/var/log/blackbox_exporter"
 
 blackbox_exporter_web_listen_address: "0.0.0.0:9115"
 
-blackbox_exporter_cli_flags: {} 
+blackbox_exporter_cli_flags: {}
 #blackbox_exporter_cli_flags:
 #  log.level: "warn"
 
