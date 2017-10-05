@@ -52,7 +52,7 @@
     group: root
     mode: 0644
   notify:
-    - reload systemd
+    - restart blackbox exporter
 
 - name: configure blackbox exporter
   template:
