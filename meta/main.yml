@@ -2,9 +2,8 @@
 galaxy_info:
   author: Roman Demachkovych
   description: Deploy Blackbox Exporter
-  company: Sointeractive
   license: MIT
-  min_ansible_version: 1.9
+  min_ansible_version: 2.2
   platforms:
   - name: Ubuntu
     versions:
@@ -16,5 +15,6 @@ galaxy_info:
   - blackbox_exporter
   - monitoring
   - prometheus
+  - metrics
 
 dependencies: []
