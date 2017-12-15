@@ -6,6 +6,6 @@
     state: restarted
 
 - name: reload blackbox exporter
-  service:
+  systemd:
     name: blackbox_exporter
     state: reloaded
