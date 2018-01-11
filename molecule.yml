@@ -7,11 +7,15 @@ verifier:
   name: testinfra
 docker:
   containers:
-    - name: blackbox-exporter-xenial
+    - name: xenial
       image: solita/ubuntu-systemd
       image_version: 16.04
       privileged: true
-    - name: blackbox-exporter-centos
+    - name: centos
       image: centos/systemd
       image_version: latest
+      privileged: true
+    - name: debian-jessie
+      image: jrei/systemd-debian
+      image_version: 8
       privileged: true
