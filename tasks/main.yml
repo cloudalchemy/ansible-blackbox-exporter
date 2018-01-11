@@ -36,12 +36,18 @@
 - name: propagate blackbox exporter binary
   copy:
     src: "/tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/blackbox_exporter"
-    dest: "/opt/blackbox_exporter"
-    mode: 0755
+    dest: "{{ blackbox_exporter_root_dir }}/blackbox_exporter"
+    mode: 0750
     owner: blackbox-exp
     group: blackbox-exp
   notify:
     - restart blackbox exporter
+
+- name: Ensure blackbox exporter binary has cap_net_raw capability
+  capabilities:
+    path: '{{ blackbox_exporter_root_dir }}/blackbox_exporter'
+    capability: cap_net_raw+ep
+    state: present
 
 - name: create systemd service unit
   template:
