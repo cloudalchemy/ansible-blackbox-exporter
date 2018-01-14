@@ -43,6 +43,12 @@
   notify:
     - restart blackbox exporter
 
+- name: Install libcap on Debian systems
+  package:
+    name: "libcap2-bin"
+    state: present
+  when: ansible_os_family | lower == "debian"
+
 - name: Ensure blackbox exporter binary has cap_net_raw capability
   capabilities:
     path: '{{ blackbox_exporter_root_dir }}/blackbox_exporter'
