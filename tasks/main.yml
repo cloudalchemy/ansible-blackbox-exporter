@@ -20,7 +20,6 @@
     owner: blackbox-exp
     group: blackbox-exp
     mode: 0755
-  with_items:
 
 - name: download blackbox exporter binary to local folder
   become: no
