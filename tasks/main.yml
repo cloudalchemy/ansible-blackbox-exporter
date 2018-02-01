@@ -15,14 +15,11 @@
 
 - name: create blackbox_exporter directories
   file:
-    path: "{{ item }}"
+    path: "{{ blackbox_exporter_root_dir }}"
     state: directory
     owner: blackbox-exp
     group: blackbox-exp
     mode: 0755
-  with_items:
-    - "{{ blackbox_exporter_root_dir }}"
-    - "{{ blackbox_exporter_log_dir }}"
 
 - name: download blackbox exporter binary to local folder
   become: no
