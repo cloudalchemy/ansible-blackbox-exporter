@@ -5,8 +5,7 @@ testinfra_hosts = AnsibleRunner('.molecule/ansible_inventory').get_hosts('all')
 
 def test_files(host):
     dirs = [
-        "/opt/blackbox_exporter",
-        "/var/log/blackbox_exporter"
+        "/opt/blackbox_exporter"
     ]
     files = [
         "/etc/blackbox_exporter.yml",
