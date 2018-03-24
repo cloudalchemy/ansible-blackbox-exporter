@@ -14,7 +14,7 @@ Deploy and manage [blackbox exporter](https://github.com/prometheus/blackbox_exp
 
 ## Requirements
 
-- Ansible > 2.2
+- Ansible >= 2.3
 - go-lang installed on deployer machine (same one where ansible is installed)
 
 ## Role Variables
