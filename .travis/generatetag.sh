@@ -3,8 +3,8 @@
 # Some basic variables
 GIT_MAIL="paulfantom@gmail.com"
 GIT_USER="paulfantom"
-ORGANIZATION="cloudalchemy"
-PROJECT="ansible-blackbox-exporter"
+ORGANIZATION="$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')"
+PROJECT="$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $2}')"
 
 # Git config
 git config --global user.email "${GIT_MAIL}"
