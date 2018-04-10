@@ -23,7 +23,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
-| `blackbox_exporter_version` | 0.11.0 | Blackbox exporter package version |
+| `blackbox_exporter_version` | 0.12.0 | Blackbox exporter package version |
 | `blackbox_exporter_root_dir` | /opt/blackbox_exporter | Path to directory with blackbox exporter binary file |
 | `blackbox_exporter_web_listen_address` | 0.0.0.0:9115 | Address on which blackbox exporter will be listening |
 | `blackbox_exporter_cli_flags` | {} | Additional configuration flags passed to blackbox exporter binary at startup |
