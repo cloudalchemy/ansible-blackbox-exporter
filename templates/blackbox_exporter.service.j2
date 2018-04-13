@@ -11,7 +11,7 @@ PermissionsStartOnly=true
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart={{ blackbox_exporter_root_dir }}/blackbox_exporter \
   --config.file=/etc/blackbox_exporter.yml \
-  --web.listen-address={{ blackbox_exporter_web_listen_address }}{% for flag, flag_value in blackbox_exporter_cli_flags.iteritems() %} \
+  --web.listen-address={{ blackbox_exporter_web_listen_address }}{% for flag, flag_value in blackbox_exporter_cli_flags.items() %} \
   --{{ flag }}={{ flag_value }}{% endfor %}
 
 SyslogIdentifier=blackbox_exporter
