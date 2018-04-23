@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
+
+**Merged pull requests:**
+
+- Use newer test filter schema to get rid of some deprecation warnings. [\#20](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/20) ([swesterveld](https://github.com/swesterveld))
+
 ## [0.5.10](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-04-17)
 **Merged pull requests:**
 
