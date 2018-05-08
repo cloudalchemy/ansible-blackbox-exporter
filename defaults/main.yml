@@ -6,8 +6,8 @@ blackbox_exporter_root_dir: "/opt/blackbox_exporter"
 blackbox_exporter_web_listen_address: "0.0.0.0:9115"
 
 blackbox_exporter_cli_flags: {}
-#blackbox_exporter_cli_flags:
-#  log.level: "warn"
+# blackbox_exporter_cli_flags:
+#   log.level: "warn"
 
 blackbox_exporter_configuration_modules:
   http_2xx:
