@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- upgrade to molecule 2.x [\#21](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/21) ([paulfantom](https://github.com/paulfantom))
 - Use newer test filter schema to get rid of some deprecation warnings. [\#20](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/20) ([swesterveld](https://github.com/swesterveld))
 
 ## [0.5.10](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-04-17)
