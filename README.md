@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.blackbox_exporter-blue.svg)](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter/)
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-blackbox-exporter.svg)](https://github.com/cloudalchemy/ansible-blackbox-exporter/tags)
-[![IRC](https://img.shields.io/badge/chat-on%20freenode-blue.svg)](http://webchat.freenode.net/?channels=cloudalchemy)
+[![IRC](https://img.shields.io/badge/irc.freenode.net-%23cloudalchemy-yellow.svg)](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#cloudalchemy)
 
 # Description
 
