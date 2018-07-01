@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.6.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-07-01)
+**Merged pull requests:**
+
+- use tox, ansible 2.6, and allow using remote docker host [\#23](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/23) ([paulfantom](https://github.com/paulfantom))
+
 ## [0.5.11](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-05-27)
 **Fixed bugs:**
 
