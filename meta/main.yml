@@ -20,7 +20,7 @@ galaxy_info:
     versions:
     - 27
   galaxy_tags:
-  - blackbox_exporter
+  - exporter
   - monitoring
   - prometheus
   - metrics
