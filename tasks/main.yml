@@ -83,5 +83,6 @@
 
 - name: ensure blackbox_exporter service is enabled
   systemd:
+    daemon_reload: true
     name: blackbox_exporter
     enabled: true
