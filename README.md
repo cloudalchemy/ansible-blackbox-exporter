@@ -14,7 +14,7 @@ Deploy and manage [blackbox exporter](https://github.com/prometheus/blackbox_exp
 
 ## Requirements
 
-- Ansible >= 2.4
+- Ansible >= 2.5 (It might work on previous versions, but we cannot guarantee it)
 
 ## Role Variables
 
