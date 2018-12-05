@@ -1,88 +1,26 @@
 ---
-- name: create blackbox_exporter system group
-  group:
-    name: blackbox-exp
-    system: true
-    state: present
+- include: preflight.yml
+  tags:
+    - blackbox_exporter_install
+    - blackbox_exporter_configure
+    - blackbox_exporter_run
 
-- name: create blackbox_exporter system user
-  user:
-    name: blackbox-exp
-    system: true
-    shell: "/sbin/nologin"
-    group: blackbox-exp
-    createhome: false
+- include: install.yml
+  become: true
+  tags:
+    - blackbox_exporter_install
 
-- name: create blackbox_exporter directories
-  file:
-    path: "{{ blackbox_exporter_root_dir }}"
-    state: directory
-    owner: blackbox-exp
-    group: blackbox-exp
-    mode: 0755
+- include: configure.yml
+  become: true
+  tags:
+    - blackbox_exporter_configure
 
-- name: download blackbox exporter binary to local folder
-  become: false
-  unarchive:
-    src: "https://github.com/prometheus/blackbox_exporter/releases/download/v{{ blackbox_exporter_version }}/blackbox_exporter-{{ blackbox_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}.tar.gz"
-    dest: "/tmp"
-    remote_src: true
-    creates: "/tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/blackbox_exporter"
-  register: _download_binary
-  until: _download_binary is succeeded
-  retries: 5
-  delay: 2
-  delegate_to: localhost
-  check_mode: false
-
-- name: propagate blackbox exporter binary
-  copy:
-    src: "/tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/blackbox_exporter"
-    dest: "{{ blackbox_exporter_root_dir }}/blackbox_exporter"
-    mode: 0750
-    owner: blackbox-exp
-    group: blackbox-exp
-  notify:
-    - restart blackbox exporter
-
-- name: Install libcap on Debian systems
-  package:
-    name: "libcap2-bin"
-    state: present
-  register: _download_packages
-  until: _download_packages is succeeded
-  retries: 5
-  delay: 2
-  when: ansible_os_family | lower == "debian"
-
-- name: Ensure blackbox exporter binary has cap_net_raw capability
-  capabilities:
-    path: '{{ blackbox_exporter_root_dir }}/blackbox_exporter'
-    capability: cap_net_raw+ep
-    state: present
-
-- name: create systemd service unit
-  template:
-    src: blackbox_exporter.service.j2
-    dest: /etc/systemd/system/blackbox_exporter.service
-    owner: root
-    group: root
-    mode: 0644
-  notify:
-    - restart blackbox exporter
-
-- name: configure blackbox exporter
-  template:
-    src: blackbox_exporter.yml.j2
-    dest: /etc/blackbox_exporter.yml
-    owner: blackbox-exp
-    group: blackbox-exp
-    mode: 0644
-  notify:
-    - reload blackbox exporter
-
-- name: ensure blackbox_exporter service is enabled
+- name: ensure blackbox_exporter service is started and enabled
+  become: true
   systemd:
     daemon_reload: true
     name: blackbox_exporter
+    state: started
     enabled: true
+  tags:
+    - blackbox_exporter_run

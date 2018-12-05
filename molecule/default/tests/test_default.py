@@ -1,3 +1,4 @@
+import pytest
 import os
 import testinfra.utils.ansible_runner
 
@@ -5,22 +6,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_files(host):
-    dirs = [
-        "/opt/blackbox_exporter"
-    ]
-    files = [
-        "/etc/blackbox_exporter.yml",
-        "/opt/blackbox_exporter/blackbox_exporter"
-    ]
-    for directory in dirs:
-        d = host.file(directory)
-        assert d.is_directory
-        assert d.exists
-    for file in files:
-        f = host.file(file)
-        assert f.exists
-        assert f.is_file
+@pytest.mark.parametrize("files", [
+    "/etc/blackbox_exporter.yml",
+    "/usr/local/bin/blackbox_exporter"
+])
+def test_files(host, files):
+    f = host.file(files)
+    assert f.exists
+    assert f.is_file
 
 
 def test_service(host):
