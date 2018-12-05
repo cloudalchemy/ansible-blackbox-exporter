@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- New blackbox\_exporter upstream release! [\#27](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Mention gnu-tar requirement [\#26](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/26) ([jstaffans](https://github.com/jstaffans))
 
 ## [0.6.2](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-10-08)
