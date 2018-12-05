@@ -1,3 +1,4 @@
+{{ ansible_managed | comment }}
 [Unit]
 Description=Blackbox Exporter
 After=network.target
@@ -9,7 +10,7 @@ User=blackbox-exp
 Group=blackbox-exp
 PermissionsStartOnly=true
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart={{ blackbox_exporter_root_dir }}/blackbox_exporter \
+ExecStart=/usr/local/bin/blackbox_exporter \
   --config.file=/etc/blackbox_exporter.yml \
   --web.listen-address={{ blackbox_exporter_web_listen_address }}{% for flag, flag_value in blackbox_exporter_cli_flags.items() %} \
   --{{ flag }}={{ flag_value }}{% endfor %}
