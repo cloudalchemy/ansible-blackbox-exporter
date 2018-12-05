@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
-
+## [0.7.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-12-05)
 **Merged pull requests:**
 
+- Always install in /usr/local/bin & role cleanup [\#28](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/28) ([paulfantom](https://github.com/paulfantom))
 - New blackbox\_exporter upstream release! [\#27](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Mention gnu-tar requirement [\#26](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/26) ([jstaffans](https://github.com/jstaffans))
 
@@ -116,10 +116,10 @@
 ## [0.3.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-10-05)
 ## [0.3.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-07-21)
 ## [0.2.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-07-21)
-## [0.1.4](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-07-19)
 ## [0.1.3](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-07-19)
-## [0.1.2](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-06-14)
+## [0.1.4](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-07-19)
 ## [0.1.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-06-14)
+## [0.1.2](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-06-14)
 ## [0.1.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-06-05)
 ## [0.0.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2017-05-16)
 
