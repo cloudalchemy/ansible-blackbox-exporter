@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.7.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2019-03-23)
+**Merged pull requests:**
+
+- New blackbox\_exporter upstream release! [\#29](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/29) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.7.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2018-12-05)
 **Merged pull requests:**
 
