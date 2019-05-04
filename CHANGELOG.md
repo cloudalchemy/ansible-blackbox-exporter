@@ -1,5 +1,12 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
+
+**Merged pull requests:**
+
+- Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Wait for network to be online [\#30](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/30) ([paulfantom](https://github.com/paulfantom))
+
 ## [0.7.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2019-03-23)
 **Merged pull requests:**
 
