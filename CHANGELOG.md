@@ -2,8 +2,13 @@
 
 ## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
 
+**Closed issues:**
+
+- Default module configuration missing status codes [\#32](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/32)
+
 **Merged pull requests:**
 
+- Added default module options to exporter [\#33](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/33) ([brokoli18](https://github.com/brokoli18))
 - Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Wait for network to be online [\#30](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/30) ([paulfantom](https://github.com/paulfantom))
 
