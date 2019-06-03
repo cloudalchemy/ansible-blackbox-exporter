@@ -13,7 +13,7 @@ blackbox_exporter_configuration_modules:
     timeout: 5s
     http:
       method: GET
-      valid_status_codes: []      
+      valid_status_codes: []
 #  http_post_2xx:
 #    prober: http
 #    timeout: 5s
