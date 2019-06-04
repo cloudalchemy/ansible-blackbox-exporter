@@ -1,10 +1,4 @@
 ---
-- include: preflight.yml
-  tags:
-    - blackbox_exporter_install
-    - blackbox_exporter_configure
-    - blackbox_exporter_run
-
 - include: install.yml
   become: true
   tags:
