@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- add simple preflight checks [\#35](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/35) ([paulfantom](https://github.com/paulfantom))
 - Added default module options to exporter [\#33](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/33) ([brokoli18](https://github.com/brokoli18))
 - Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Wait for network to be online [\#30](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/30) ([paulfantom](https://github.com/paulfantom))
