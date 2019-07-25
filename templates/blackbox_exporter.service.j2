@@ -2,6 +2,7 @@
 [Unit]
 Description=Blackbox Exporter
 After=network-online.target
+StartLimitInterval=0
 
 [Service]
 Type=simple
@@ -18,6 +19,7 @@ ExecStart=/usr/local/bin/blackbox_exporter \
 SyslogIdentifier=blackbox_exporter
 KillMode=process
 Restart=always
+RestartSec=1
 
 [Install]
 WantedBy=multi-user.target
