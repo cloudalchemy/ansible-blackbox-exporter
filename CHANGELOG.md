@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- added restartsec and startlimitinterval configurations [\#36](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/36) ([oguzhaninan](https://github.com/oguzhaninan))
 - add simple preflight checks [\#35](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/35) ([paulfantom](https://github.com/paulfantom))
 - Added default module options to exporter [\#33](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/33) ([brokoli18](https://github.com/brokoli18))
 - Synchronize files from cloudalchemy/skeleton [\#31](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/31) ([cloudalchemybot](https://github.com/cloudalchemybot))
