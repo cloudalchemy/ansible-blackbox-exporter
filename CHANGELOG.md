@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- Moving to python 3 and dropping support for python 2.x \(on deployer host\) [\#39](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/39) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#37](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/37) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - added restartsec and startlimitinterval configurations [\#36](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/36) ([oguzhaninan](https://github.com/oguzhaninan))
 - add simple preflight checks [\#35](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/35) ([paulfantom](https://github.com/paulfantom))
