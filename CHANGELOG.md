@@ -8,6 +8,9 @@
 
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#43](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/43) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- increase systemd service security [\#42](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/42) ([paulfantom](https://github.com/paulfantom))
+- Synchronize files from cloudalchemy/skeleton [\#41](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/41) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Update minimum required ansible version [\#40](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/40) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Moving to python 3 and dropping support for python 2.x \(on deployer host\) [\#39](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/39) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Synchronize files from cloudalchemy/skeleton [\#37](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/37) ([cloudalchemybot](https://github.com/cloudalchemybot))
