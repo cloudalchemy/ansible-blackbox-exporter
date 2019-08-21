@@ -14,15 +14,16 @@ PermissionsStartOnly=true
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart=/usr/local/bin/blackbox_exporter \
   --config.file=/etc/blackbox_exporter.yml \
-  --web.listen-address={{ blackbox_exporter_web_listen_address }}{% for flag, flag_value in blackbox_exporter_cli_flags.items() %} \
-  --{{ flag }}={{ flag_value }}{% endfor %}
+  {% for flag, flag_value in blackbox_exporter_cli_flags.items() -%}
+  --{{ flag }}={{ flag_value }} \
+  {% endfor -%}
+  --web.listen-address={{ blackbox_exporter_web_listen_address }}
 
 SyslogIdentifier=blackbox_exporter
 KillMode=process
 Restart=always
 RestartSec=5
 
-CapabilityBoundingSet=CAP_SET_UID
 LockPersonality=true
 NoNewPrivileges=true
 MemoryDenyWriteExecute=true
