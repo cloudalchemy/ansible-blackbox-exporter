@@ -4,6 +4,18 @@
     that: ansible_service_mgr == 'systemd'
     msg: "This role only works with systemd"
 
+- name: Get systemd version
+  command: systemctl --version
+  changed_when: false
+  check_mode: false
+  register: __systemd_version
+  tags:
+    - skip_ansible_lint
+
+- name: Set systemd version fact
+  set_fact:
+    blackbox_exporter_systemd_version: "{{ __systemd_version.stdout_lines[0].split(' ')[-1] }}"
+
 - name: Naive assertion of proper listen address
   assert:
     that:
