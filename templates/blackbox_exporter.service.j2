@@ -33,7 +33,7 @@ RemoveIPC=true
 RestrictSUIDSGID=true
 
 {% if blackbox_exporter_systemd_version | int >= 232 %}
-PrivateUsers=true
+AmbientCapabilities=CAP_NET_RAW
 ProtectControlGroups=true
 ProtectKernelModules=true
 ProtectKernelTunables=yes
