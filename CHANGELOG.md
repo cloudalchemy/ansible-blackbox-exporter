@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- templates/blackbox\_exporter.service.j2: allow icmp probe [\#45](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/45) ([lborguetti](https://github.com/lborguetti))
 - Synchronize files from cloudalchemy/skeleton [\#43](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/43) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - increase systemd service security [\#42](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/42) ([paulfantom](https://github.com/paulfantom))
 - Synchronize files from cloudalchemy/skeleton [\#41](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/41) ([cloudalchemybot](https://github.com/cloudalchemybot))
