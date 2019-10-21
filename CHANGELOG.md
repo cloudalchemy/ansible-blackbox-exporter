@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] add support for CentOS8 [\#47](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/47) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - New prometheus/blackbox\_exporter upstream release! [\#46](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/46) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - templates/blackbox\_exporter.service.j2: allow icmp probe [\#45](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/45) ([lborguetti](https://github.com/lborguetti))
 - New prometheus/blackbox\_exporter upstream release! [\#44](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/44) ([cloudalchemybot](https://github.com/cloudalchemybot))
