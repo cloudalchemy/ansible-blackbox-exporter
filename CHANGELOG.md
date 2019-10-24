@@ -1,8 +1,6 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
-
-
+## [0.8.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2019-10-24)
 **Closed issues:**
 
 - Default module configuration missing status codes [\#32](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/32)
