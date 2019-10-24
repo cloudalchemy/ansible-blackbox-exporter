@@ -2,6 +2,7 @@
 
 ## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
 
+
 **Closed issues:**
 
 - Default module configuration missing status codes [\#32](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/32)
