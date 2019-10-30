@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
+
+**Merged pull requests:**
+
+- tasks/preflight.yml: fixed systemd version fact parsing [\#49](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/49) ([elcomtik](https://github.com/elcomtik))
+
 ## [0.8.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2019-10-24)
 **Closed issues:**
 
