@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- New prometheus/blackbox\_exporter upstream release! [\#51](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/51) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Update releaser.sh [\#50](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/50) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - tasks/preflight.yml: fixed systemd version fact parsing [\#49](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/49) ([elcomtik](https://github.com/elcomtik))
 
