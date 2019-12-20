@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] remove IRC link [\#56](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/56) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#55](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/55) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - molecule: add alternative test scenario; fix default test scenario [\#53](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/53) ([paulfantom](https://github.com/paulfantom))
 - \[REPO SYNC\] molecule: use CI images from quay.io instead of dockerhub [\#52](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/52) ([cloudalchemybot](https://github.com/cloudalchemybot))
