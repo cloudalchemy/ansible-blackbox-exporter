@@ -1,13 +1,13 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
-
+## [0.9.0](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2020-01-11)
 **Fixed bugs:**
 
 - systemd version fails to parse correctly on Debian 10 [\#57](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/57)
 
 **Merged pull requests:**
 
+- Switch user login shell to /usr/sbin/nologin [\#61](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/61) ([paulfantom](https://github.com/paulfantom))
 - \[REPO SYNC\] use latest available python [\#60](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/60) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - preflight: Fix detection of systemd version for systemd 240+ [\#58](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/58) ([lae](https://github.com/lae))
 - \[REPO SYNC\] remove IRC link [\#56](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/56) ([cloudalchemybot](https://github.com/cloudalchemybot))
