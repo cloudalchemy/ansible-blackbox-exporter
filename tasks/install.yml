@@ -9,7 +9,7 @@
   user:
     name: blackbox-exp
     system: true
-    shell: "/sbin/nologin"
+    shell: "/usr/sbin/nologin"
     group: blackbox-exp
     createhome: false
 
