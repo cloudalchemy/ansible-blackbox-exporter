@@ -32,8 +32,8 @@ ProtectHome=true
 RemoveIPC=true
 RestrictSUIDSGID=true
 
-{% if blackbox_exporter_systemd_version | int >= 232 %}
 AmbientCapabilities=CAP_NET_RAW
+{% if blackbox_exporter_systemd_version | int >= 232 %}
 ProtectControlGroups=true
 ProtectKernelModules=true
 ProtectKernelTunables=yes
