@@ -1,7 +1,6 @@
- # Change Log
+# Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
-
+## [0.9.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2020-04-20)
 **Fixed bugs:**
 
 - ICMP probes fails on older systemd  [\#64](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/64)
