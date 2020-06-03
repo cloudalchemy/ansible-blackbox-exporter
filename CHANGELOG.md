@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] Add passlib as a test requirement [\#67](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/67) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.9.1](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2020-04-20)
 **Fixed bugs:**
 
