@@ -2,6 +2,7 @@
 blackbox_exporter_version: 0.16.0
 
 blackbox_exporter_web_listen_address: "0.0.0.0:9115"
+blackbox_binary_local_dir: ''
 
 blackbox_exporter_cli_flags: {}
 # blackbox_exporter_cli_flags:
