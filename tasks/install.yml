@@ -32,7 +32,7 @@
       copy:
         src: "/tmp/blackbox_exporter-{{ blackbox_exporter_version }}.linux-{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}/blackbox_exporter"
         dest: "/usr/local/bin/blackbox_exporter"
-        mode: 0750
+        mode: 0755
         owner: root
         group: root
       notify:
