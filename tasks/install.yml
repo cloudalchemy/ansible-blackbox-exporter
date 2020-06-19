@@ -13,7 +13,7 @@
     group: blackbox-exp
     createhome: false
 
-- block: 
+- block:
     - name: download blackbox exporter binary to local folder
       become: false
       unarchive:
