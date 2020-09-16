@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] add troubleshooting doc skeleton [\#71](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/71) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.9.2](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2020-06-19)
 **Merged pull requests:**
 
