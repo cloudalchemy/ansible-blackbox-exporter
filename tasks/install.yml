@@ -52,3 +52,9 @@
     path: '/usr/local/bin/blackbox_exporter'
     capability: cap_net_raw+ep
     state: present
+  when: not ansible_check_mode
+
+- name: Check Debug Message
+  debug:
+    msg: "The capabilities module is skipped during check mode, as the file may not exist, causing execution to fail."
+  when: ansible_check_mode
