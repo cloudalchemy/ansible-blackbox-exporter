@@ -1,13 +1,13 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter)
-
+## [0.9.3](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter) (2020-10-12)
 **Fixed bugs:**
 
 - Role Fails When Running Initially in Check Mode [\#72](https://github.com/cloudalchemy/ansible-blackbox-exporter/issues/72)
 
 **Merged pull requests:**
 
+- New prometheus/blackbox\_exporter upstream release! [\#74](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/74) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Only run capabilities module in apply mode. [\#73](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/73) ([seancallaway](https://github.com/seancallaway))
 - \[REPO SYNC\] add troubleshooting doc skeleton [\#71](https://github.com/cloudalchemy/ansible-blackbox-exporter/pull/71) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
