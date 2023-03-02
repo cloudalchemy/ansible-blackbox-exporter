@@ -1,4 +1,6 @@
-<p><img src="http://jacobsmedia.com/wp-content/uploads/2015/08/black-box-edit.png" alt="blackbox logo" title="blackbox" align="right" height="60" /></p>
+# DEPRECATED
+
+**This role has been deprecated in favor of a the [prometheus-community/ansible](https://github.com/prometheus-community/ansible) collection.**
 
 # Ansible Role: Blackbox Exporter
 
@@ -7,7 +9,7 @@
 [![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.blackbox_exporter-blue.svg)](https://galaxy.ansible.com/cloudalchemy/blackbox-exporter/)
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-blackbox-exporter.svg)](https://github.com/cloudalchemy/ansible-blackbox-exporter/tags)
 
-# Description
+## Description
 
 Deploy and manage [blackbox exporter](https://github.com/prometheus/blackbox_exporter) which allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.
 
